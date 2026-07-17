@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+</head>
+<body style="background-color: aqua;">
+  <center><h2>CALCULATOR</h2>
+<hr>
+  <input type="number" id="num1"style="width:100px; height:20px;" >
+  <input type="number" id="num2"style="width:100px; height:20px;" >
+  <br><br>
+  <button style="width:60px; height:60px;background: #01fbea;" onclick="add()"><h1>+</h1></button>
+  <button style="width:60px; height:60px;background: #01fbea;" onclick="subtract()"><h1>-</h1></button>
+  <button style="width:60px; height:60px;background: #01fbea;" onclick="multiply()"><h1>*</h1></button>
+  <button style="width:60px; height:60px;background: #01fbea;" onclick="divide()"><h1>/</h1></button>
+
+  <p><h4>RESULT  </h4>   <span id="result"></span></p>
+</center>
+  <script>
+    function add() {
+      let a = Number(document.getElementById("num1").value);
+      let b = Number(document.getElementById("num2").value);
+      document.getElementById("result").innerText = a + b;
+    }
+
+    function subtract() {
+      let a = Number(document.getElementById("num1").value);
+      let b = Number(document.getElementById("num2").value);
+      document.getElementById("result").innerText = a - b;
+    }
+
+    function multiply() {
+      let a = Number(document.getElementById("num1").value);
+      let b = Number(document.getElementById("num2").value);
+      document.getElementById("result").innerText = a * b;
+    }
+
+    function divide() {
+      let a = Number(document.getElementById("num1").value);
+      let b = Number(document.getElementById("num2").value);
+      if (b === 0) {
+        document.getElementById("result").innerText = "Cannot divide by zero!";
+      } else {
+        document.getElementById("result").innerText = a / b;
+      }
+    }
+  </script>
+</body>
+</html>
